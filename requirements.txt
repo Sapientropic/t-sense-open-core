@@ -1,0 +1,3 @@
+# Core scanner dependency — Telethon MTProto user client.
+# Pinned for reproducibility; bump after testing on new releases.
+telethon==1.43.2

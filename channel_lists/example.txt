@@ -1,0 +1,30 @@
+# Example Channel List
+# These are illustrative example names — replace with real channels you subscribe to.
+# One channel per line. Lines starting with # are ignored. Empty lines are skipped.
+# Customize this list for your needs.
+
+# General IT jobs
+example_remote_jobs
+example_it_vacancies
+example_dev_careers
+
+# Frontend-specific
+example_frontend_jobs
+example_react_jobs
+
+# Programming communities
+example_python_jobs
+example_golang_jobs
+example_js_jobs
+
+# Startup / Product
+example_startup_jobs
+example_product_hiring
+
+# Relocation
+example_relocate_us
+example_relocate_eu
+
+# Remote-specific
+example_remote_dev
+example_remote_daily

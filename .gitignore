@@ -1,0 +1,45 @@
+# Credentials
+config.toml
+*.session
+*.session-journal
+
+# Environment / secrets
+.env
+.env.*
+
+# Logs
+*.log
+
+# Local runtime state
+.t-sense/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Output
+output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+nul
+
+# Internal/private project material
+AGENTS.md
+.codex/
+docs/private/
+docs/internal/
+docs/product/
+docs/strategy/
+docs/market/
+docs/research/
+profiles/private/
+channel_lists/private/

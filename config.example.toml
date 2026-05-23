@@ -1,0 +1,8 @@
+# Telegram API credentials
+# Get yours at https://my.telegram.org/apps
+# If the form shows ERROR, see docs/getting-api-credentials.md
+
+api_id = 0
+api_hash = "your_api_hash_here"
+# scan.py stores the Telethon session at ~/.config/t-sense/session by default.
+# Set T_SENSE_CONFIG_DIR to keep config and session files somewhere else.

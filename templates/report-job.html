@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{report_title} — {date}</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,{icon_b64}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
+<script>{shared_js}</script>
+<style>{shared_css}</style>
+</head>
+<body>
+<div class="page">
+  <header class="report-header">
+    <div class="report-topline">
+      <div class="brand-lockup">
+        <img class="header-icon" src="data:image/png;base64,{icon_b64}" alt="">
+        <span>T-Sense</span>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="masthead">
+      <div>
+        <p class="report-kicker">Pixel signal deck</p>
+        <h1 class="report-title">{report_title}</h1>
+        <p class="report-deck">{channel_count} channels and {total_messages} messages distilled into a ranked action brief.</p>
+      </div>
+      <dl class="report-meta" aria-label="Report metadata">
+        <div><dt>Date</dt><dd>{date}</dd></div>
+        <div><dt>Window</dt><dd>{scan_window}</dd></div>
+        <div><dt>Channels</dt><dd>{channel_count}</dd></div>
+        <div><dt>Messages</dt><dd>{total_messages}</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="stats-bar" aria-label="Report statistics">
+    <div class="stat stat-total"><span class="stat-icon matches" aria-hidden="true"></span><div class="stat-copy"><div class="stat-value total">{stat_matches}</div><div class="stat-label">Matches</div></div><div class="stat-meter" aria-hidden="true"></div></div>
+    <div class="stat stat-high"><span class="stat-icon high" aria-hidden="true"></span><div class="stat-copy"><div class="stat-value high">{stat_high}</div><div class="stat-label">Apply</div></div><div class="stat-meter" aria-hidden="true"></div></div>
+    <div class="stat stat-medium"><span class="stat-icon medium" aria-hidden="true"></span><div class="stat-copy"><div class="stat-value medium">{stat_medium}</div><div class="stat-label">Inspect</div></div><div class="stat-meter" aria-hidden="true"></div></div>
+    <div class="stat stat-low"><span class="stat-icon low" aria-hidden="true"></span><div class="stat-copy"><div class="stat-value low">{stat_low}</div><div class="stat-label">Skip</div></div><div class="stat-meter" aria-hidden="true"></div></div>
+    <div class="stat stat-deduped"><span class="stat-icon dedupe" aria-hidden="true"></span><div class="stat-copy"><div class="stat-value total">{stat_deduped}</div><div class="stat-label">Deduped</div></div><div class="stat-meter" aria-hidden="true"></div></div>
+  </section>
+
+  <section class="profile-section">
+    <div class="profile-title">Candidate Profile</div>
+    <div class="profile-grid">
+{profile_items}
+    </div>
+  </section>
+
+{sections}
+
+  <footer class="report-footer">
+    <strong>Methodology:</strong> {channel_count} {methodology_label} scanned ({scan_window}). LLM-extracted against the supplied profile. Same company + role deduplicated across channels.{footer_note}
+  </footer>
+</div>
+</body>
+</html>
